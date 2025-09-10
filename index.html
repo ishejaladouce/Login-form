@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <main>
+        <h1>Create Your Account</h1>
+        <p>Please fill in all required fiels to register.</p>
+
+        <form action="/register" method="post" autocomplete="on">
+            
+              <!-- CSRF token goes here -->
+            <input type="hidden" name="csrf_token" value="">
+
+            <fieldset>
+                <legend>Account Details</legend>
+
+                <!-- Name -->
+                 <label for="fullname">Full Name *</label>
+                 <input type="text" id="name" name="name" required minlength="2" maxlength="100" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,100}$" placeholder="Ladouce" autocomplete="name"/>
+
+                <!-- Email -->
+                 <label for="email">Email *</label>
+                 <input type="email" id="email" name="email" required maxlength="254" placeholder="you@gmail.com" autocomplete="email"/>
+
+                <!-- Password -->
+                 <label for="password">Password *</label>
+                 <input type="password" id="password" name="password" required minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$" placeholder="At least 8 charaters" autocomplete="password"/>
+
+                <!-- Address -->
+                 <label for="address">Address *</label>
+                 <textarea id="address" name="address" rows="3" required maxlength="500" placeholder="Stree, City, Country" autocomplete="address"></textarea>>
+
+                 <!-- Phone -->
+                 <label for="phone">Phone *</label>
+                 <input type="tel" id="phone" name="phone" required pattern="^\+?[0-9]{7,15}$" placeholder="+250788888889" autocomplete="phone"/>
+
+            </fieldset>
+
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+
+    </main>
+</body>
+</html>
