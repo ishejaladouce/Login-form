@@ -1,14 +1,27 @@
+/* Body: center everything vertically & horizontally */
 body{
     display: flex;
+    flex-direction: column;  /* stack alert and form */
     justify-content: center;
     align-items: center;    
-    height: 100vh;          
+    min-height: 100vh;       /* allow form to shrink without scroll */
     margin: 0;
     background: linear-gradient(to right, #ffe6f0, #f3e8ff);
-    /* background-color: #ffe6f0; */
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
+/* Top alert box */
+.alert{
+    width: 320px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* space between alert and form */
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Registration form */
 form{
     background-color: #fff0f5;
     padding: 30px;
@@ -21,11 +34,13 @@ form{
     text-align: center;
 }
 
+/* Form title */
 form h2{
     color: #ff69b4;
     margin-bottom: 20px;
 }
 
+/* Input groups */
 .form-group{
     display: flex;
     flex-direction: column;
@@ -34,6 +49,7 @@ form h2{
     gap: 5px;
 }
 
+/* Inputs */
 input{
     width: 100%;
     padding: 10px;
@@ -43,11 +59,13 @@ input{
     box-sizing: border-box;
 }
 
+/* Input focus effect */
 input:focus{
     border-color: #ff69b4;
-    box-shadow: 0 0  5px #ff69b4; 
+    box-shadow: 0 0 5px #ff69b4; 
 }
 
+/* Submit button */
 button{
     padding: 12px;
     border-radius: 15px;
@@ -64,7 +82,8 @@ button:hover{
     transform: scale(1.03);
 }
 
-/* small{
+/* Error messages */
+small{
     display: block;
     color: #c00;
     font-size: 12px;
@@ -72,4 +91,9 @@ button:hover{
     min-height: 16px;
     transition: color 0.3s ease;
     visibility: hidden;
-} */
+}
+
+/* Input border red when error */
+.error input {
+    border-color: #c00;
+}

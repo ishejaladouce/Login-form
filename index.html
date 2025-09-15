@@ -1,84 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <body>
-    <div
-      id="form-alert"
-      role="alert"
-      aria-live="polite"
-      class="alert"
-      style="display: none"
-    ></div>
-    <form id="signup-form" novalidate>
-      <h2>Create Your Account!</h2>
+  <!-- Top Alert -->
+  <div id="form-alert" role="alert" aria-live="polite" class="alert" style="display: none;"></div>
 
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your Name"
-          required
-        />
-        <!-- <small class="error-msg" aria-hidden="true">Name is required</small> -->
-      </div>
+  <!-- Registration Form -->
+  <form id="signup-form" novalidate>
+    <h2>Create Your Account!</h2>
 
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Your Email"
-          required
-        />
-        <!-- <small class="error-msg" aria-hidden="true">please enter a valid email</small> -->
-      </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <small class="error-msg" aria-hidden="true"></small>
+    </div>
 
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Choose a Password"
-          required
-        />
-        <!-- <small class="error-msg" aria-hidden="true">Password must be at least 6 characters</small> -->
-      </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <small class="error-msg" aria-hidden="true"></small>
+    </div>
 
-      <div class="form-group">
-        <label for="address">Address:</label>
-        <input
-          type="text"
-          id="address"
-          name="address"
-          placeholder="Your Address"
-        />
-        <!-- <small class="error-msg" aria-hidden="true">Address is required</Address></small> -->
-      </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Choose a Password" required />
+      <small class="error-msg" aria-hidden="true"></small>
+    </div>
 
-      <div class="form-group">
-        <label for="phone">Phone:</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Your Phone Number"
-        />
-        <!-- <small class="error-msg" aria-hidden="true">please enter a valid phone number</small> -->
-      </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" placeholder="Your Address" required />
+      <small class="error-msg" aria-hidden="true"></small>
+    </div>
 
-      <button type="submit">Submit</button>
-    </form>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required />
+      <small class="error-msg" aria-hidden="true"></small>
+    </div>
 
-    <script src="script.js"></script>
-  </body>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
 </html>
