@@ -24,12 +24,12 @@ body{
 /* Registration form */
 form{
     background-color: #fff0f5;
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     width: 320px;
     text-align: center;
 }
@@ -37,7 +37,8 @@ form{
 /* Form title */
 form h2{
     color: #ff69b4;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
 }
 
 /* Input groups */
@@ -52,7 +53,7 @@ form h2{
 /* Inputs */
 input{
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     border-radius: 10px;
     border: 1px solid #ffb6c1;
     outline: none;
