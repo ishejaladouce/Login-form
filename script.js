@@ -66,12 +66,21 @@ document.addEventListener('DOMContentLoaded', function () {
       clearError(addressInput); return true;
    }
 
+   // Phone validation
    function validatePhone() {
-      const value = phoneInput.value.trim();
-      const regex = /^\+?\d{8,15}$/; // Only digits, optional +
-      if (!value) { showError(phoneInput, 'Phone number is required'); return false; }
-      if (!regex.test(value)) { showError(phoneInput, 'Enter a valid phone number'); return false; }
-      clearError(phoneInput); return true;
+   const value = phoneInput.value.trim();
+   const regex = /^\+2507\d{8}$/; 
+
+   if (!value) { 
+      showError(phoneInput, 'Phone number is required'); 
+      return false; 
+   }
+   if (!regex.test(value)) { 
+      showError(phoneInput, 'Phone must be in the Rwandan format +2507XXXXXXXX'); 
+      return false; 
+   }
+   clearError(phoneInput); 
+   return true;
    }
 
    // Blur and input events
