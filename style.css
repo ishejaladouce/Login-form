@@ -1,100 +1,123 @@
-/* Body: center everything vertically & horizontally */
-body{
+/* Body styling */
+body {
     display: flex;
-    flex-direction: column;  /* stack alert and form */
-    justify-content: center;
-    align-items: center;    
-    min-height: 100vh;       /* allow form to shrink without scroll */
+    justify-content: center;      
+    align-items: center;          
     margin: 0;
+    padding: 0;
     background: linear-gradient(to right, #ffe6f0, #f3e8ff);
     font-family: 'Comic Sans MS', cursive, sans-serif;
+    min-height: 100vh;
+    flex-direction: column;       
 }
 
-/* Top alert box */
-.alert{
-    width: 320px;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px; /* space between alert and form */
+/* Alert styling */
+.alert {
+    display: none;
+    width: 350px;                
     text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;         
     font-weight: bold;
-    position: relative;
+    transition: all 0.3s ease;
 }
 
-/* Registration form */
-form{
+/* Form styling */
+form {
     background-color: #fff0f5;
-    padding: 20px;
+    padding: 15px 25px;          
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 320px;
+    width: 360px;                
     text-align: center;
+    box-sizing: border-box;
+    margin: auto;                
 }
 
-/* Form title */
-form h2{
+/* Form heading */
+form h2 {
     color: #ff69b4;
-    margin-bottom: 15px;
-    font-size: 20px;
+    margin-bottom: 12px;
 }
 
-/* Input groups */
-.form-group{
+/* Form group styling */
+.form-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    gap: 5px;
+    gap: 4px;
 }
 
-/* Inputs */
-input{
+/* Input styling */
+input {
     width: 100%;
-    padding: 8px;
+    padding: 7px;                
     border-radius: 10px;
     border: 1px solid #ffb6c1;
     outline: none;
     box-sizing: border-box;
 }
 
-/* Input focus effect */
-input:focus{
+input:focus {
     border-color: #ff69b4;
     box-shadow: 0 0 5px #ff69b4; 
 }
 
-/* Submit button */
-button{
-    padding: 12px;
+/* Container for the three name inputs */
+.name-inputs {
+    display: flex;
+    gap: 2px;             
+    width: 100%;
+}
+
+.name-inputs input {
+    flex: 1;              
+    padding: 7px;        
+    border-radius: 10px;
+    border: 1px solid #ffb6c1;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.name-inputs input:focus {
+    border-color: #ff69b4;
+    box-shadow: 0 0 5px #ff69b4; 
+}
+
+/* Button styling */
+button {
+    padding: 10px;
     border-radius: 15px;
     border: none;
     background-color: #ff69b4;
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-button:hover{
+button:hover {
     background-color: #ff1493;
     transform: scale(1.03);
 }
 
-/* Error messages */
-small{
+/* Small error messages */
+small {
     display: block;
     color: #c00;
     font-size: 12px;
-    margin-top: 4px;
-    min-height: 16px;
+    margin-top: 1px;
+    min-height: 12px;
     transition: color 0.3s ease;
     visibility: hidden;
 }
 
-/* Input border red when error */
-.error input {
+/* Form group when error */
+.form-group.error input {
     border-color: #c00;
 }
