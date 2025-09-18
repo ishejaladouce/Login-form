@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
   const form = document.getElementById("signup-form");
   const alertBox = document.getElementById("form-alert");
 
@@ -40,12 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
   }
 
-  // === VALIDATIONS ===
+  // VALIDATIONS 
 
   // Name validation (letters only)
   function validateNameInput(input, fieldName, required = true) {
     const value = input.value.trim();
-    const regex = /^[A-Za-z]+$/; // only letters
+    const regex = /^[A-Za-z]+$/; 
 
     if (!value && required) {
       showError(input, `${fieldName} is required`);
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return firstValid && middleValid && lastValid;
   }
 
+  // Email Validation
   function validateEmail() {
     const value = emailInput.value.trim().toLowerCase();
     const firstName = firstNameInput.value.trim().toLowerCase();
@@ -93,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 
+  // Password Validation
   function validatePassword() {
     const value = passwordInput.value.trim();
     const regex =
@@ -113,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 
+  // Address Validation
   function validateAddress() {
     const value = addressInput.value.trim();
     if (!value) {
@@ -127,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 
-  // Phone validation (Rwanda format: +2507XXXXXXXX)
+  // Phone validation (Rwandan format: +2507XXXXXXXX)
   function validatePhone() {
     const value = phoneInput.value.trim();
     const regex = /^\+2507\d{8}$/;
@@ -147,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 
+  // DOB Validation
   function validateDOB() {
     const value = dobInput.value.trim();
     const dobRegex = /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/;
