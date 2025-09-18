@@ -2,37 +2,92 @@
 body {
     display: flex;
     justify-content: center;      
-    align-items: center;          
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #ffe6f0, #f3e8ff);
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: rgb(6, 0, 29); 
+    font-family: 'Inter';
     min-height: 100vh;
     flex-direction: column;       
+    color: black;  
 }
 
 /* Alert styling */
 .alert {
     display: none;
-    width: 350px;                
+    width: 360px;                
     text-align: center;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 0.3em;
     margin-bottom: 15px;         
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
+/* Page layout: two columns */
+.page-layout {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero section (left side) */
+.hero {
+  flex: 1;
+  /* padding: 30px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.hero p {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* SVG container */
+.hero-visual {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.hero-visual img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form section (right side) */
+.form-section {
+  flex: 1;
+  display: flex;
+  margin-left: 15%;
+  /* justify-content: center;
+  align-items: center; */
+}
+
 /* Form styling */
 form {
-    background-color: #fff0f5;
-    padding: 15px 25px;          
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    background-color: #ffffff;
+    padding: 20px 25px;          
+    border-radius: 0.3em;      
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 360px;                
+    gap: 12px;
+    width: 380px;                
     text-align: center;
     box-sizing: border-box;
     margin: auto;                
@@ -40,8 +95,8 @@ form {
 
 /* Form heading */
 form h2 {
-    color: #ff69b4;
-    margin-bottom: 12px;
+    color: #FFA800;             
+    margin-bottom: 15px;
 }
 
 /* Form group styling */
@@ -56,54 +111,56 @@ form h2 {
 /* Input styling */
 input {
     width: 100%;
-    padding: 7px;                
-    border-radius: 10px;
-    border: 1px solid #ffb6c1;
+    padding: 8px;                
+    border-radius: 0.3em;
+    border: 1px solid #ccc;
     outline: none;
     box-sizing: border-box;
+    font-size: 14px;
 }
 
 input:focus {
-    border-color: #ff69b4;
-    box-shadow: 0 0 5px #ff69b4; 
+    border-color: #FFA800;
+    box-shadow: 0 0 5px rgba(255, 168, 0, 0.6); 
 }
 
 /* Container for the three name inputs */
 .name-inputs {
     display: flex;
-    gap: 2px;             
+    gap: 4px;             
     width: 100%;
 }
 
 .name-inputs input {
     flex: 1;              
-    padding: 7px;        
-    border-radius: 10px;
-    border: 1px solid #ffb6c1;
+    padding: 8px;        
+    border-radius: 0.3em;
+    border: 1px solid #ccc;
     outline: none;
     box-sizing: border-box;
 }
 
 .name-inputs input:focus {
-    border-color: #ff69b4;
-    box-shadow: 0 0 5px #ff69b4; 
+    border-color: #FFA800;
+    box-shadow: 0 0 5px rgba(255, 168, 0, 0.6);
 }
 
 /* Button styling */
 button {
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 0.3em;
     border: none;
-    background-color: #ff69b4;
-    color: white;
+    background-color: #FFA800;
+    color: black;
     font-size: 15px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #ff1493;
-    transform: scale(1.03);
+    background-color: #e69500;
+    transform: scale(1.02);
 }
 
 /* Small error messages */
@@ -111,8 +168,8 @@ small {
     display: block;
     color: #c00;
     font-size: 12px;
-    margin-top: 1px;
-    min-height: 12px;
+    margin-top: 2px;
+    min-height: 14px;
     transition: color 0.3s ease;
     visibility: hidden;
 }
@@ -120,4 +177,11 @@ small {
 /* Form group when error */
 .form-group.error input {
     border-color: #c00;
+}
+
+@media (max-width: 900px) {
+  .page-layout {
+    flex-direction: column;
+    align-items: center;
+  }
 }
